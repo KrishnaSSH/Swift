@@ -32,11 +32,6 @@ For development with automatic reloading, use the --reload option:
 uvicorn main:app --reload
 ```
 
-**Screenshots**
-
-![Screenshot 1](screenshots/Screenshot_Embed.png)
-![Screenshot 2](screenshots/Screenshot_Web.png)
-
 **Contribution**
 
 Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or create a pull request.
