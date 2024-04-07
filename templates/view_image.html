@@ -1,0 +1,33 @@
+<!-- templates/view_image.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="{{ image_info.filename | replace('uploads/', '') }}">
+    <meta property="og:description" content="Uploaded at {{ image_info.created_at.strftime('%A, %d. %B %Y %I:%M%p') }} ({{image_info.size}})">
+    <meta property="og:image" content="{{ image_url }}">
+    <meta property="og:image:width" content="{{image_info.width}}">
+    <meta property="og:image:height" content="{{image_info.height}}">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ image_info.filename | replace('uploads/', '') }}">
+    <meta name="twitter:description" content="Uploaded at {{ image_info.created_at.strftime('%A, %d. %B %Y %I:%M%p') }} ({{image_info.size}})">
+    <meta name="twitter:image" content="{{ image_url }}">
+    <title>View Image - {{ image_info.filename | replace('uploads/', '') }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+</head>
+<body>
+    <div class="fullscreen-image">
+        <img src="{{ image_url }}" alt="Image" class="image">
+        <!-- Display image details directly in the image-details container -->
+        <div class="image-details">
+            <p class="image-title">{{ image_info.filename | replace('uploads/', '') }}</p>
+            <p class="upload-date">Uploaded at {{ image_info.created_at.strftime("%A, %d. %B %Y %I:%M%p") }}</p>
+            <p class="imgsize"><b>Resolution</b> :{{image_info.width}}x{{image_info.height}}<br><b>Size</b> : {{image_info.size}}</p>
+        </div>
+    </div>
+</body>
+</html>

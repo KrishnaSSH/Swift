@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImgUP : upload images</title>
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="shortcut icon" href="static/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Swift Image</h1>
+    </header>
+
+    <div id="uploadForm">
+
+        <form id="uform" enctype="multipart/form-data">
+            <h1>Upload Your Image</h1>
+            <div id="warnings" style="color: red; text-align: center;">
+            </div>
+            
+            <label for="code">Code:</label>
+            <input type="text" id="code" placeholder="Custom Code">
+            <br>
+            <label for="img">Image:</label>
+            <input type="file" id="img" accept="image/*" >
+
+            <button type="button" onclick="uploadFile()">Upload</button>
+        </form>
+
+        <div id="result" style="display:none;">
+        </div>
+        <br>
+        <div id="progress-container" style="display: none;">
+            <progress value="0" max="100" id="uploadProgress"></progress>
+            <div id="progressText">0%</div>
+        </div>
+        <br>
+        <p style="text-align: center; color:#708090;">Made by Krishna</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="https://discord.com/users/877351272251023440" target="_blank">Discord</a>
+        <a href="https://github.com/Krishna-G-OP" target="_blank">GitHub</a>
+        <a href="/docs">API docs</a>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>

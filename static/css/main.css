@@ -1,0 +1,138 @@
+body {
+  background-color: slategray;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+#uploadForm {
+  margin: 50px auto;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="file"] {
+  width: 95%;
+  padding: 10px;
+  border: none;
+  background-color: #555;
+  color: white;
+  border-radius: 5px;
+}
+
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #777;
+  transform: scale(1.1);
+}
+
+#result {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#progress-container {
+  display: none;
+  text-align: center;
+}
+
+#uploadProgress {
+  width: 100%;
+  border: none;
+}
+progress {
+  width: 40%;
+  display: block; /* default: inline-block */
+  margin: 2em auto;
+  padding: 3px;
+  border: 0 none;
+  background: #444;
+  border-radius: 14px;
+}
+progress::-moz-progress-bar {
+  border-radius: 12px;
+  background: #a4bdec;
+
+}
+/* webkit */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  progress {
+    height: 25px;
+  }
+}
+progress::-webkit-progress-bar {
+    background: transparent;
+}  
+progress::-webkit-progress-value {  
+  border-radius: 12px;
+  background:#a4bdec;
+} 
+
+
+/* Animation styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply animation to form */
+#uploadForm {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Footer styles */
+footer {
+  position:fixed;
+  bottom: 20px;
+  width: 95% auto;
+  text-align: center;
+  padding: 20px;
+  right: 20px;
+  left: 20px;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
