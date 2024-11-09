@@ -1,4 +1,4 @@
-# ImgUP Fastapi image uploader
+# image uploader
 
 **Overview**
 
